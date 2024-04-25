@@ -10,6 +10,8 @@ updates:
     schedule:
       interval: daily
     open-pull-requests-limit: 99
+    labels:
+      - "ok-to-test"
 """
 
     for foldername, _, filenames in os.walk(root_dir):
@@ -48,6 +50,8 @@ def package_ecosystem(ecosystem, rel_path, interval):
     directory: {rel_path}
     schedule:
       interval: {interval}
+    labels:
+      - "ok-to-test"
 """
     return block
 
